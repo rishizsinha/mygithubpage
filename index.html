@@ -54,6 +54,10 @@
 	    <!-- END NAVIGATION -->
 
 
+	    <!--*************************************************************************-->
+		<!-- COURSEWORK SECTION                                                      -->
+		<!--*************************************************************************-->
+
 		<div class="container content-container">
 			<h1> Rishi Sinha </h1>
 			<img src="img/intro/meser.jpg" align="middle">
@@ -61,21 +65,27 @@
 			
 		</div>
 
+		<!--*************************************************************************-->
+		<!-- COURSEWORK SECTION                                                      -->
+		<!--*************************************************************************-->
+
 		<div class="container content-container" id="experience">
 			<h1> Experience </h1>
 		</div>
 
+		<!--*************************************************************************-->
+		<!-- COURSEWORK SECTION                                                      -->
+		<!--*************************************************************************-->
+
 		<div class="container content-container" id="edu">
 			<h1> Coursework </h1>
 			<div class="row">
-				<div class="col-md-4"><img src="img/coursework/csicon.jpg" class="icon"></div>
-				<div class="col-md-4"><img src="img/coursework/bioicon.jpg" class="icon"></div>
-				<div class="col-md-4"><img src="img/coursework/statsicon.jpg" class="icon"></div>
-			<div>
-			<div id="edu_show">
+				<div class="col-md-4" id="csicon"><img src="img/coursework/csicon.jpg" class="icon"></div>
+				<div class="col-md-4" id="bioicon"><img src="img/coursework/bioicon.jpg" class="icon"></div>
+				<div class="col-md-4" id="statsicon"><img src="img/coursework/statsicon.jpg" class="icon"></div>
 			</div>
 
-			<div id="edu_cs">
+			<div id="edu_show">
 				<h2>Computer Science</h2>
 				<p> I LOVE CS!!!!!!!!!!
 					AKDFJAL;DKJF
@@ -84,7 +94,17 @@
 					SFJADKLJFA;LKDJFAKDF
 				</p>
 			</div>
-			<div id="edu_bio">
+
+			<div id="edu_cs" style="display:none">
+				<h2>Computer Science</h2>
+				<p> I LOVE CS!!!!!!!!!!
+					AKDFJAL;DKJF
+					AKLDJFAKL;DJFAL;KDJFAKLDFJA
+					DFJAKL;DJF;LAKJDF;LKAJDFKAD
+					SFJADKLJFA;LKDJFAKDF
+				</p>
+			</div>
+			<div id="edu_bio" style="display:none">
 				<h2>Biology</h2>
 				<p> I LOVE BIO!!!!!!!!!!
 					AKDFJAL;DKJF
@@ -93,7 +113,7 @@
 					SFJADKLJFA;LKDJFAKDF
 				</p>
 			</div>
-			<div id="edu_stats">
+			<div id="edu_stats" style="display:none">
 				<h2>Statistics</h2>
 				<p> I LOVE STATS!!!!!!!!!!
 					AKDFJAL;DKJF
@@ -103,6 +123,40 @@
 				</p>
 			</div>
 		</div>
+		<script>
+
+		    $("#csicon").click(function(){
+		        // $("#edu_cs").fadeIn();
+		        // $("#edu_bio").fadeOut();
+		        // $("#edu_stats").fadeOut();
+		        $('#edu_show').fadeOut('fast', function() {
+			        $('#edu_show').html($('#edu_cs').html());
+    				$('#edu_show').fadeIn('fast');
+			    });
+		    });
+		    $("#bioicon").click(function(){
+		        // $("#edu_cs").fadeOut();
+		        // $("#edu_bio").fadeIn();
+		        // $("#edu_stats").fadeOut();
+		        $('#edu_show').fadeOut('fast', function() {
+			        $('#edu_show').html($('#edu_bio').html());
+    				$('#edu_show').fadeIn('fast');
+			    });
+		    });
+		    $("#statsicon").click(function(){
+		        // $("#edu_cs").fadeOut();
+		        // $("#edu_bio").fadeOut();
+		        // $("#edu_stats").fadeIn();
+		        $('#edu_show').fadeOut('fast', function() {
+			        $('#edu_show').html($('#edu_stats').html());
+    				$('#edu_show').fadeIn('fast');
+			    });
+		    });
+		</script>
+
+		<!--*************************************************************************-->
+		<!-- COURSEWORK SECTION                                                      -->
+		<!--*************************************************************************-->
 
 		<div class="container content-container" id="volunteering">
 			<h1> Volunteer Work </h1>
