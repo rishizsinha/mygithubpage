@@ -124,33 +124,20 @@
 			</div>
 		</div>
 		<script>
-
+			function switchTo(element) {
+				$('#edu_show').fadeOut('fast', function() {
+					$('#edu_show').html($(element).html());
+					$('#edu_show').fadeIn('fast');
+				});
+			}
 		    $("#csicon").click(function(){
-		        // $("#edu_cs").fadeIn();
-		        // $("#edu_bio").fadeOut();
-		        // $("#edu_stats").fadeOut();
-		        $('#edu_show').fadeOut('fast', function() {
-			        $('#edu_show').html($('#edu_cs').html());
-    				$('#edu_show').fadeIn('fast');
-			    });
+		    	switchTo('#edu_cs');
 		    });
 		    $("#bioicon").click(function(){
-		        // $("#edu_cs").fadeOut();
-		        // $("#edu_bio").fadeIn();
-		        // $("#edu_stats").fadeOut();
-		        $('#edu_show').fadeOut('fast', function() {
-			        $('#edu_show').html($('#edu_bio').html());
-    				$('#edu_show').fadeIn('fast');
-			    });
+		    	switchTo('#edu_bio');
 		    });
 		    $("#statsicon").click(function(){
-		        // $("#edu_cs").fadeOut();
-		        // $("#edu_bio").fadeOut();
-		        // $("#edu_stats").fadeIn();
-		        $('#edu_show').fadeOut('fast', function() {
-			        $('#edu_show').html($('#edu_stats').html());
-    				$('#edu_show').fadeIn('fast');
-			    });
+		    	switchTo('#edu_stats');
 		    });
 		</script>
 
