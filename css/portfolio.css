@@ -5,10 +5,17 @@
 }
 
 .icon {
-	width:200px;
-	height:200px;
+	width:150px;
+	height:150px;
+}
+
+.icon:hover {
+	-moz-box-shadow: 0 0 10px #ccc; 
+	-webkit-box-shadow: 0 0 10px #ccc; 
+	box-shadow: 0 0 10px #ccc;
 }
 
 #edu_cs {
 	background-color: green; 
 }
+
